@@ -1,0 +1,44 @@
+import java.util.Scanner;
+public class Contrasena
+{
+    public static void main(String []args){
+        Scanner leer = new Scanner(System.in);
+        String contrasena="contrasena", contrasena1;
+        int ban =0;
+        boolean a = false; 
+        System.out.println("3 intentos");
+        for(int i = 0; i < 3; i++){
+            if(i == 2){
+                System.out.println("ULTIMA OPORTUNIDAD");
+            }
+
+            System.out.println("Introduzca usu contraseña ( "+(i+1)+" )");
+            contrasena1 = leer.nextLine();
+
+
+                if(contrasena.length() == contrasena1.length()){
+                    while(ban < contrasena.length()){ 
+                       if(contrasena.charAt(ban)!=contrasena1.charAt(ban)){
+                          a =false;
+                        }else{
+                          a = true;
+                        }
+                       ban++; 
+                   }
+                   ban=0;
+                }else{
+                    a = false;
+                }
+
+                //System.out.println("\n"+contra1+"\n");
+
+                if(a == true){
+                    i = 3;
+                    System.out.println("Correcto");
+
+                }else{
+                    System.out.println("INCORRECTO");
+                }
+         }
+    }
+}
