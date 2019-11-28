@@ -10,15 +10,12 @@ public class Contrasena
         for(int i = 0; i < 3; i++){
             if(i == 2){
                 System.out.println("ULTIMA OPORTUNIDAD");
-            }
-
-            System.out.println("Introduzca usu contraseña ( "+(i+1)+" )");
+         }
+            System.out.println("Introduzca su contraseña ( "+(i+1)+" )");
             contrasena1 = leer.nextLine();
-
-
-                if(contrasena.length() == contrasena1.length()){
-                    while(ban < contrasena.length()){ 
-                       if(contrasena.charAt(ban)!=contrasena1.charAt(ban)){
+         if(contrasena.length() == contrasena1.length()){
+         while(ban < contrasena.length()){ 
+          if(contrasena.charAt(ban)!=contrasena1.charAt(ban)){
                           a =false;
                         }else{
                           a = true;
@@ -29,9 +26,6 @@ public class Contrasena
                 }else{
                     a = false;
                 }
-
-                //System.out.println("\n"+contra1+"\n");
-
                 if(a == true){
                     i = 3;
                     System.out.println("Correcto");
